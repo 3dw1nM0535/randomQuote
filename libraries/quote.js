@@ -44,4 +44,7 @@ function displayQuote() {
 $(document).ready(function() {
   displayQuote();
   $('#myquote').on('click', displayQuote);
+  $('#tweet').on('click', function() {
+    window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+  })
 });
